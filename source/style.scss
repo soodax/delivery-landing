@@ -1,0 +1,667 @@
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;700;800&family=Poppins:wght@300;600&display=swap');
+
+//colors
+$white: white;
+$grey: #F2F4FA;
+$lightCyan: #D4D7E6;
+$lightestGrey: #E5E5E5;
+$lightGrey: #9093A6;
+$darkGrey: #3F4255;
+$darkestGrey: #313030;
+$yellowLight: #FFF7CC;
+$yellowBright: #FFE145;
+$yellowDark: #B79C10;
+
+//fonts
+%MartelSans800 {
+    font-family: 'Martel Sans';
+    font-weight: 800;
+}
+
+%MartelSans700 {
+    font-family: 'Martel Sans';
+    font-weight: 700;
+}
+
+%MartelSans400 {
+    font-family: 'Martel Sans';
+    font-weight: 400;
+}
+
+%MartelSans300 {
+    font-family: 'Martel Sans';
+    font-weight: 300;
+}
+
+%Poppins600 {
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+%Poppins300 {
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+    // @media (max-width: 900px) {
+    //     padding: 0 10px;
+
+    // }
+
+}
+
+.main {
+    // min-height: 100vh;
+    padding-top: 89px;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1280px) {
+            padding: 0 10px;
+        }
+        @media (max-width: 900px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__col {
+        flex: 1 1 50%;
+
+        @media (max-width: 900px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
+    &__image {
+        display: flex;
+        flex-direction: column;
+        // padding: 40px 0 0 0;
+        flex: 1 1 50%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        padding: 120px 0 0 0;
+        font-size: 58px;
+        line-height: 64px;
+        letter-spacing: 0.05em;
+        color: $darkGrey;
+        @extend %Poppins300;
+
+        @media (max-width: 900px) {
+            text-align: center;
+        }
+    }
+
+    &__features {
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        padding: 88px 0 0 0;
+    }
+
+    &__feature {
+        border: 2px solid $yellowBright;
+        border-radius: 4px;
+        padding: 16px 24px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: $darkGrey;
+        @extend %MartelSans700;
+
+        span {
+            letter-spacing: normal;
+            line-height: 16px;
+            font-size: 12px;
+            @extend %MartelSans400;
+        }
+
+    }
+
+    &__benefits {
+        padding: 24px 24px 24px 92px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 872px;
+        align-items: center;
+        box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.08);
+
+        @media (max-width: 900px) {
+            padding: 24px;
+        }
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.5px;
+            color: $darkGrey;
+            @extend %MartelSans300;
+        }
+    }
+
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: $white;
+    padding: 8px 0;
+
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__logo {
+        max-width: 185px;
+        max-height: 24px;
+    }
+}
+
+.nav {
+    display: flex;
+    gap: 48px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 20px;
+        color: $lightGrey;
+        gap: 5px;
+        @extend %MartelSans700;
+    }
+
+    &__button {
+        padding: 12px;
+        border-radius: 50%;
+        display: flex;
+        box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.08);
+        background: $white;
+    }
+}
+
+.restaurants {
+    margin: 48px 0 72px 0;
+
+
+    @media (max-width: 1280px) {
+        padding: 0 10px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 48px 0;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: baseline;
+        }
+    }
+
+    &__row:last-child {
+        margin: 0;
+    }
+
+    &__title {
+        font-size: 36px;
+        line-height: 64px;
+        letter-spacing: 0.08em;
+        color: $darkGrey;
+        @extend %Poppins300;
+    }
+
+
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        border: 0px transparent;
+        border-radius: 4px;
+        overflow: hidden;
+
+        filter: drop-shadow(0px 2px 16px rgba(60, 62, 74, 0.08));
+    }
+
+    &__image {
+
+        width: 100%;
+    }
+
+    &__logo {
+        background: $white;
+        width: 100%;
+    }
+}
+
+.search {
+    background: $grey;
+    @media (max-width: 1280px) {
+        padding: 0 10px;
+    }
+    
+    &__row {
+        padding: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 1280px) {
+            padding: 80px 0;
+        }
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+    }
+
+    &__col {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: stretch;
+            // align-items: center;
+        }
+    }
+
+    &__col-v {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media (max-width: 900px) {
+            align-items: center;
+
+            // align-items: center;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        line-height: 64px;
+        letter-spacing: 0.08em;
+        color: $darkGrey;
+        @extend %Poppins300;
+
+        @media (max-width: 900px) {
+            text-align: center;
+            
+            // align-items: center;
+        }
+
+        
+    }
+
+    &__info {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        color: $darkGrey;
+        @extend %MartelSans300;
+    }
+
+    &__block {
+        padding: 26px 20px;
+        background: $white;
+        display: flex;
+        gap: 12px;
+        input {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.5px;
+            color: $lightGrey;
+            @extend %MartelSans300;
+            
+        }
+    }
+}
+
+.specialities {
+    padding: 72px 0;
+
+    @media (max-width: 1280px) {
+        padding: 72px 10px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 48px 0;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+    }
+
+    &__title {
+        font-size: 36px;
+        line-height: 64px;
+        letter-spacing: 0.08em;
+        color: $darkGrey;
+        @extend %Poppins300;
+    }
+
+    &__slider {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__item {
+        cursor: pointer;
+        padding: 24px 0;
+        flex: 1 1 12.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        box-shadow: 0px 2px 16px rgba(60, 62, 74, 0.08);
+        border-radius: 6px;
+        color: $darkestGrey;
+        background: $white;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        @extend %MartelSans300;
+    }
+
+    &__icon {
+    }
+
+    &__info {
+    }
+}
+
+.adapt-row {
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.stats {
+    width: 100%;
+    background: url(./../img/stats/bg.png) no-repeat;
+    background-size: cover;
+
+    @media (max-width: 1280px) {
+        padding: 0 10px;
+    }
+
+    &__row {
+        padding: 56px 0 45px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__col {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.location {
+    padding: 72px 0;
+
+    @media (max-width: 1280px) {
+        padding: 72px 10px;
+    }
+
+    &__stack {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__map {
+        margin-bottom: 72px;
+
+        img {
+            width: 100%;
+        }
+
+    }
+
+    &__title {
+        
+        font-size: 36px;
+        line-height: 64px;
+        letter-spacing: 0.08em;
+        color: $darkGrey;
+        margin-bottom: 21px;
+        @extend %Poppins300;
+
+        span {
+            color: $lightGrey;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 24px;
+            letter-spacing: 0.05em;
+            // align-items: center;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 767px) {
+            gap: 20px;
+            flex-direction: column;
+            // align-items: center;
+        }
+    }
+
+    &__col {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.footer {
+    background: $darkGrey;
+    padding: 48px 0;
+
+    @media (max-width: 1280px) {
+        padding: 48px 10px;
+    }
+
+    &__logo {
+        color: $white;
+    }
+
+    &__ad {
+        display: flex;
+        gap: 9px;
+        margin-top: 98px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        // align-items: center;
+        margin-bottom: 100px;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: baseline;
+        }
+    }
+
+    &__row:last-child {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+       
+
+        ul li {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.5px;
+            color: $white;
+            @extend %MartelSans300;
+        }
+
+        ul li a{
+            transition: 0.3s;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.5px;
+            color: $lightCyan;
+            margin-bottom: 16px;
+            @extend %MartelSans700;
+        }
+
+        ul li a:hover {
+            color: $yellowBright;
+        }
+    }
+
+    &__title {
+        color: $white;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 24px;
+        @extend %Poppins600;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 24px;
+
+        a {
+            transition: 0.3s;
+        }
+
+        a:hover {       
+            transform: scale(1.2);
+        }
+    }
+
+    &__privacy {
+        display: flex;
+        justify-content: space-between;
+        gap: 55px;
+
+        a {
+            transition: 0.3s;
+            font-size: 12px;
+            line-height: 16px;
+            color: $white;
+            @extend %MartelSans800;
+        }
+
+        a:hover {
+            color: $yellowBright;
+        }
+
+        span {
+            font-size: 12px;
+            line-height: 16px;
+            color: $white;
+            @extend %MartelSans400;
+        }
+    }
+}
+
+//buttons
+.btn-send {
+    transition: 0.3s;
+    padding: 28px 24px;
+    border-radius: 4px;
+    color: $yellowDark;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    background: $yellowBright;
+    @extend %MartelSans700;
+}
+
+.btn-send:hover {
+    color: $yellowDark;
+    background: $yellowLight;
+}
+
+.btn-show-all {
+    transition: 0.3s;
+    padding: 16px 24px;
+    background: $lightestGrey;
+    border-radius: 4px;
+    color: $lightGrey;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    @extend %MartelSans700;
+}
+
+.btn-show-all:hover {
+    color: $darkGrey;
+    background: $lightCyan;
+}
+
