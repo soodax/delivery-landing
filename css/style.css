@@ -326,8 +326,17 @@ h1, h2, h3, h4, h5, h6 {
   padding: 8px 36px;
   background: white;
   min-height: 100vh;
-  width: 100%;
   z-index: 3;
+}
+@media (max-width: 500px) {
+  .nav__menu {
+    top: 110px;
+  }
+}
+@media (max-width: 767px) {
+  .nav__menu {
+    width: 100%;
+  }
 }
 .nav__phoneBlock {
   display: -webkit-box;
