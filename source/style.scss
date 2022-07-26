@@ -609,6 +609,7 @@ $yellowDark: #B79C10;
         padding: 48px 10px;
     }
 
+
     &__logo {
         color: $white;
     }
@@ -629,6 +630,17 @@ $yellowDark: #B79C10;
         @media (max-width: 767px) {
             flex-direction: column;
             align-items: baseline;
+            padding: 0 0 0 20px;
+        }
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: baseline;
+            padding: 0 0 0 30px;
+        }
+
+        @media (max-width: 400px) {
+            padding: 0 0 0 10px;
         }
     }
 
@@ -679,6 +691,10 @@ $yellowDark: #B79C10;
         line-height: 32px;
         margin-bottom: 24px;
         @extend %Poppins600;
+
+        @media (max-width: 767px) {
+            margin: 20px 0 0 0;
+        }
     }
 
     &__socials {
@@ -691,6 +707,10 @@ $yellowDark: #B79C10;
 
         a:hover {       
             transform: scale(1.2);
+        }
+
+        @media (max-width: 767px) {
+            margin: 0 0 20px 0;
         }
     }
 
