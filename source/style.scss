@@ -221,11 +221,10 @@ $yellowDark: #B79C10;
         top: 70px;
         right: 0;
         padding: 8px 36px;
-        background: $white;   
+        background: red;   
         min-height: 100vh;
         width: 100%;
         z-index: 3;
-        overflow: hidden;
     }
 
     &__phoneBlock {
